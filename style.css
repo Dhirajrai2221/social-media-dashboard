@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --YouTube: hsl(348, 97%, 39%);
+
+  --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --Toggle-light: hsl(230, 22%, 74%);
+
+  /* light mode */
+  --White: hsl(0, 0%, 100%);
+  --Very-Pale-Blue: hsl(228, 100%, 98%);
+  --Light-Grayish-Blue: hsl(228, 50%, 96%);
+  --Dark-Grayish-Blue: hsl(229, 12%, 44%);
+  --Very-Dark-Blue: hsl(230, 17%, 14%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 125rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.social-media-dashboard {
+  /* background-color: red; */
+  padding-top: 3.6rem;
+}
+.social-upper-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.social-upper-section .left {
+  margin-bottom: 4.6rem;
+}
+
+.heading-secondary {
+  font-size: 2.8rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.social-upper-section .left p {
+  font-size: 1.4rem;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.social-upper-section .right {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.social-upper-section .right p {
+  font-size: 1.4rem;
+  color: var(--Toggle-light);
+}
+
+
+.toggle-btn {
+  width: 4.8rem;
+  height: 2.4rem;
+  background-color: var(--Toggle-light);
+  border-radius: 10rem;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.toggle-btn::before {
+content: "";
+position: absolute;
+width: 1.8rem;
+height: 1.8rem;
+border-radius: 50%;
+background-color: var(--White);
+margin: 2.5px;
+transition: all .3s;
+}
+
+
+.input-checkbox:checked + .toggle-btn::before{
+    transform: translateX(24px);
+}
+.input-checkbox:checked + .toggle-btn{
+    background: linear-gradient(225deg, #40DB86 0%, #388FE7 98.02%);
+}
+
+.input-checkbox{
+    display: none;
+}
+
