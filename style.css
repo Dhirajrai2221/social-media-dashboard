@@ -26,8 +26,11 @@
   --White: hsl(0, 0%, 100%);
   --Very-Pale-Blue: hsl(228, 100%, 98%);
   --Light-Grayish-Blue: hsl(228, 50%, 96%);
+  --hover-light-Grayish-Blue:hsl(228, 33%, 91%);
+
   --Dark-Grayish-Blue: hsl(229, 12%, 44%);
   --Very-Dark-Blue: hsl(230, 17%, 14%);
+
 }
 
 html {
@@ -141,7 +144,13 @@ body {
   border-radius: 5px;
   border-top: 4px solid;
   overflow: hidden;
+  transition: all .3s ease-out;
 }
+
+.social-follower-card:hover {
+  background-color: var(--hover-light-Grayish-Blue);
+}
+
 .facebook-card {
   border-color: var(--Facebook);
 }
@@ -238,6 +247,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  transition: all .3s ease-out;
+}
+
+.overview-card:hover {
+  background-color: var(--hover-light-Grayish-Blue);
 }
 
 .overview-des {
